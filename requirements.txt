@@ -4,3 +4,6 @@ sqlalchemy
 psycopg2-binary
 pydantic
 jinja2
+flask
+psycopg2-binary
+gunicorn
