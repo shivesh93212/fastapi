@@ -1,6 +1,6 @@
 from fastapi import Depends, FastAPI
 from models import ProductSchema
-from database import session, engine
+from database import SessionLocal, engine
 import database_models
 from sqlalchemy.orm import Session
 
