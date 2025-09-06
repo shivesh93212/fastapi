@@ -1,5 +1,5 @@
 from fastapi import Depends, FastAPI
-from models import Product  # ✅ make sure models.py exists
+from models import ProductSchema
 from database import session, engine
 import database_models
 from sqlalchemy.orm import Session
@@ -15,9 +15,9 @@ def greet():
 
 # Sample product list
 products = [
-    Product(id=1, name="laptop", price=50000),
-    Product(id=2, name="shivesh", price=5000),
-    Product(id=3, name="sivam", price=3000),
+    ProductSchema(id=1, name="laptop", price=50000),
+    ProductSchema(id=2, name="shivesh", price=5000),
+    ProductSchema(id=3, name="phone", price=20000),
 ]
 
 
