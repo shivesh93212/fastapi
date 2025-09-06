@@ -43,9 +43,9 @@ init_db()
 
 
 @app.get("/products")
-def get_all_products(db: Session = Depends(get_db)):
-    db_products = db.query(database_models.Product).all()
-    return db_products
+def get_products(db: Session = Depends(get_db)):
+    return db.query(Product).all()
+
 
 
 @app.get("/product/{id}")
