@@ -5,8 +5,9 @@ import database_models
 from sqlalchemy.orm import Session
 
 app = FastAPI()
-database_models.Base.metadata.create_all(bind=engine)
 
+# Create tables
+Base.metadata.create_all(bind=engine)
 
 @app.get("/")
 def greet():
@@ -22,7 +23,7 @@ products = [
 
 
 def get_db():
-    db = session()
+    db = SessionLocal()
     try:
         yield db
     finally:
